@@ -1,4 +1,5 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/header';
 import './App.css';
 
 function App() {
@@ -7,8 +8,8 @@ function App() {
       <Router>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
+        {/* <Route exact path="/" element={<Rockets />} />
+        <Route path="/missions" element={<Missions />} /> */}
       </Routes>
     </Router>
     </div>

@@ -1,6 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../images/planet_2.png";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../images/planet_2.png';
 
 const Header = () => (
   <div className="navContainer">
@@ -10,18 +10,20 @@ const Header = () => (
       <ul className="navBarUl">
         <li key={1}>
           <NavLink activeClassName="active" to="/">
-            Rockets{" "}
+            Rockets
+            {' '}
           </NavLink>
         </li>
         <li key={2}>
           <NavLink activeClassName="active" to="/missions">
-            {" "}
-            Missions{" "}
+            {' '}
+            Missions
+            {' '}
           </NavLink>
         </li>
         <li key={3}>
           <NavLink activeClassName="active" to="/profile">
-            {" "}
+            {' '}
             My Profile
           </NavLink>
         </li>

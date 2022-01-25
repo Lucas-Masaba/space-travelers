@@ -10,7 +10,7 @@ export const fetchMissions = () => (dispatch) => {
   dispatch({ type: LOAD });
   return fetch('https://api.spacexdata.com/v3/missions', requestOptions)
     .then((response) => response.json())
-    .then((data) => dispatch({ type: FETCH, data }))
+    .then((data) => dispatch({ type: FETCH, data }));
 };
 
 const reducer = (state = initialState, action) => {

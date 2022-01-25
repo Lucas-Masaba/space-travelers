@@ -10,7 +10,6 @@ const Missions = () => {
   useEffect(() => {
     dispatch(fetchMissions());
   }, []);
-  console.log(missions, typeof missions);
   return (
     <section className="missions">
       <table className="missions header">

@@ -12,20 +12,29 @@ const Missions = () => {
   }, []);
   return (
     <section className="missions">
-      <table className="missions header">
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th> </th>
-        </tr>
-        {missions.map((mission) => (
-          <MissionRow
-            name={mission.mission_name}
-            description={mission.description}
-            key={mission.mission_id}
-          />
-        ))}
+      <table>
+        <thead>
+          <tr className="missions header">
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.loading && (
+            <tr style={{ alignItems: 'center' }}>
+              <td>Loading...</td>
+            </tr>
+          )}
+          {missions.missions.map((mission) => (
+            <MissionRow
+              name={mission.mission_name}
+              description={mission.description}
+              key={mission.mission_id}
+            />
+          ))}
+        </tbody>
       </table>
     </section>
   );

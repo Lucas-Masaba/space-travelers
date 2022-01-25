@@ -2,6 +2,7 @@ body {
   font-size: 1.2rem;
 }
 
+/* Header */
 header {
   display: flex;
   flex-direction: row;
@@ -24,4 +25,93 @@ a {
 
 .active {
   text-decoration: underline;
+}
+
+/* Rockets */
+.rocket_item {
+  display: flex;
+}
+
+.rocket_images {
+  width: 220px;
+}
+
+.rocket_image_container {
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.rocket_paragraph_container {
+  margin-top: -1.5%;
+}
+
+/* Missions */
+table {
+  margin: auto;
+  width: calc(100vw - 4rem);
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.missions.header {
+  background-color: white;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid #dee2e6;
+  padding: 0.4rem;
+}
+
+th {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+thead th {
+  border-bottom-width: 3px;
+}
+
+td {
+  padding-bottom: 1.6rem;
+}
+
+.button-col {
+  padding: 0.4rem;
+  vertical-align: middle;
+}
+
+button {
+  margin: auto;
+  border-radius: 0.3rem;
+  width: max-content;
+}
+
+.member {
+  padding: 0.3rem;
+  font-weight: bold;
+  background-color: #6d757d;
+  border: none;
+  color: #f2f2f2;
+}
+
+.active-member {
+  background-color: #18a2b8;
+}
+
+.join {
+  padding: 0.4rem;
+  background-color: transparent;
+  color: #4b5156;
+  border: 1px solid #4b5156;
+}
+
+.joined {
+  background-color: #e04f5c;
+  color: #e04f5c;
 }

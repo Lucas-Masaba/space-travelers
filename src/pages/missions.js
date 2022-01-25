@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 import MissionRow from '../components/mission-row';
-import './missions.css';
+import '../components/spinner.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -22,11 +22,6 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {missions.loading && (
-            <tr>
-              <td colSpan="4">Loading...</td>
-            </tr>
-          )}
           {missions.missions.map((mission) => (
             <MissionRow
               name={mission.mission_name}
@@ -36,6 +31,13 @@ const Missions = () => {
           ))}
         </tbody>
       </table>
+      {missions.loading && (
+        <div className="spin-b4">
+          <h2 style={{ textAlign: 'center' }}>
+            <div className="spin" />
+          </h2>
+        </div>
+      )}
     </section>
   );
 };

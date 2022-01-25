@@ -23,8 +23,8 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.loading && (
-            <tr style={{ alignItems: 'center' }}>
-              <td>Loading...</td>
+            <tr>
+              <td colSpan="4">Loading...</td>
             </tr>
           )}
           {missions.missions.map((mission) => (

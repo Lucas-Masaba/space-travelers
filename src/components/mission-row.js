@@ -5,7 +5,7 @@ const MissionRow = (props) => {
   const { name, description } = props;
   return (
     <tr>
-      <td className="mission title-col">{name}</td>
+      <th>{name}</th>
       <td>{description}</td>
       <td className="mission button-col">
         <button type="button" className="mission member">

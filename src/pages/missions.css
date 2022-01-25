@@ -1,9 +1,10 @@
-table {
-  margin: 1rem;
+.missions table {
+  margin: auto;
+  width: calc(100vw - 4rem);
   border-collapse: collapse;
 }
 
-tr:nth-child(odd) {
+.missions tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
@@ -11,40 +12,39 @@ tr:nth-child(odd) {
   background-color: white;
 }
 
-th,
-td {
+.missions th,
+.missions td {
   text-align: left;
   vertical-align: top;
   border: 2px solid #dee2e6;
   padding: 0.4rem;
 }
 
-th,
-.title-col {
+.missions th {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-th {
+.missions thead th {
   border-bottom-width: 3px;
 }
 
-td {
+.missions td {
   padding-bottom: 1.6rem;
 }
 
-.button-col {
+.missions .button-col {
   padding: 0.4rem;
   vertical-align: middle;
 }
 
-button {
+.missions button {
   margin: auto;
   border-radius: 0.3rem;
   width: max-content;
 }
 
-.member {
+.missions .member {
   padding: 0.3rem;
   font-weight: bold;
   background-color: #6d757d;
@@ -52,18 +52,18 @@ button {
   color: #f2f2f2;
 }
 
-.active-member {
+.missions .active-member {
   background-color: #18a2b8;
 }
 
-.join {
+.missions .join {
   padding: 0.4rem;
   background-color: transparent;
   color: #4b5156;
   border: 1px solid #4b5156;
 }
 
-.joined {
+.missions .joined {
   background-color: #e04f5c;
   color: #e04f5c;
 }

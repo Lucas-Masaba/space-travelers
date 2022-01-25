@@ -27,7 +27,7 @@ const Rockets = () => {
           <div className="rocket_paragraph_container">
             <h3>{rocket.rocket_name}</h3>
             <p>{rocket.description}</p>
-            <p>{rocket.rocket_type}</p>
+            <p>{`Type: ${rocket.rocket_type}`}</p>
             <button onClick={() => reserveRockets(rocket.id)} className="rocket_reserve" type="button">Reserve Rocket</button>
           </div>
         </li>

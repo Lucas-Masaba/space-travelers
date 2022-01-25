@@ -1,5 +1,9 @@
-// import React from 'react';
+import React from 'react';
 
-const Rockets = () => {};
+const Rockets = () => (
+  <div>
+    <p>Development in progress</p>
+  </div>
+);
 
 export default Rockets;

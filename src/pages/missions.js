@@ -25,7 +25,9 @@ const Missions = () => {
           {missions.missions.map((mission) => (
             <MissionRow
               name={mission.mission_name}
+              id={mission.mission_id}
               description={mission.description}
+              joined={mission.reserved}
               key={mission.mission_id}
             />
           ))}
@@ -37,6 +39,9 @@ const Missions = () => {
             <div className="spin" />
           </h2>
         </div>
+      )}
+      {missions.error && (
+        <h3>{missions.error}</h3>
       )}
     </section>
   );

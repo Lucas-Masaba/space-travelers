@@ -90,6 +90,7 @@ button {
   margin: auto;
   border-radius: 0.3rem;
   width: max-content;
+  cursor: pointer;
 }
 
 .member {

@@ -1,7 +1,8 @@
-import { fetchRocketsFromAPI } from '../rocketsAPI/rocketsAPIhandler';
+import { fetchRocketsFromAPI } from '../../rocketsAPI/rocketsAPIhandler';
 
 // constants
 const FETCH_ROCKETS = 'rocketsStore/rockets/FETCH_ROCKETS';
+const RESERVE_ROCKETS = 'rocketsStore/rockets/RESERVE_ROCKETS';
 
 // actions
 export const fetchRockets = () => async (dispatch) => {
@@ -24,6 +25,11 @@ export const fetchRockets = () => async (dispatch) => {
   });
 };
 
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKETS,
+  payload,
+});
+
 // reducers
 const initialState = [];
 
@@ -31,6 +37,11 @@ const rocketsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
       return action.payload;
+    case RESERVE_ROCKETS:
+      return state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: true };
+      });
     default:
       return state;
   }

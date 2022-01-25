@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 import MissionRow from '../components/mission-row';
+import './missions.css';
 import '../components/spinner.css';
 
 const Missions = () => {

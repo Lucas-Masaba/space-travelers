@@ -1,5 +1,15 @@
+body {
+  font-size: 1.2rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
 img {
-  width: 500px;
+  width: 50px;
+  height: 50px;
 }
 
 ul {
@@ -14,22 +24,4 @@ a {
 
 .active {
   text-decoration: underline;
-}
-
-/*rockets*/
-.rocket_item {
-  display: flex;
-}
-
-.rocket_images {
-  width: 220px;
-}
-
-.rocket_image_container {
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
-
-.rocket_paragraph_container {
-  margin-top: -1.5%;
 }

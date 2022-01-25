@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../images/planet_2.png';
 
 const Header = () => (
-  <div className="navContainer">
+  <header className="navContainer">
     <img src={logo} alt="planet" />
     <h1 className="Heading">Space Traveler&apos;s Hub</h1>
     <nav className="navBar">
@@ -29,6 +29,6 @@ const Header = () => (
         </li>
       </ul>
     </nav>
-  </div>
+  </header>
 );
 export default Header;

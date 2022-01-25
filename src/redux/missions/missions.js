@@ -17,8 +17,7 @@ export const fetchMissions = () => (dispatch) => {
   return (
     fetch('https://api.spacexdata.com/v3/missions', requestOptions)
       .then((response) => response.json())
-      .then((data) => console.log(data))
-      // .then((data) => dispatch({ type: FETCH, data }))
+      .then((data) => dispatch({ type: FETCH, data }))
       .catch((error) => dispatch({ type: ERROR, error }))
   );
 };

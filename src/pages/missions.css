@@ -54,7 +54,7 @@ button {
 
 .join {
   padding: 0.4rem;
-  background-color: none;
+  background-color: transparent;
   color: #4b5156;
   border: 1px solid #4b5156;
 }

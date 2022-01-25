@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MissionTr = (props) => {
+const MissionRow = (props) => {
   const { name, description } = props;
   return (
     <tr>
@@ -16,8 +16,8 @@ const MissionTr = (props) => {
     </tr>
   );
 };
-MissionTr.propTypes = {
+MissionRow.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
-export default MissionTr;
+export default MissionRow;

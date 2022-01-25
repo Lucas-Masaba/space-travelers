@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
-import MissionTr from '../components/mission-tr';
+import MissionRow from '../components/mission-row';
+import './missions.module.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
@@ -21,7 +22,7 @@ const Missions = () => {
         </tr>
         {missions.loading && <h2>Loading...</h2>}
         {missions.missions.map((mission) => (
-          <MissionTr
+          <MissionRow
             name={mission.mission_name}
             description={mission.description}
             key={mission.mission_id}

@@ -9,20 +9,20 @@ const Header = () => (
     <nav className="navBar">
       <ul className="navBarUl">
         <li key={1}>
-          <NavLink activeClassName="active" to="/">
+          <NavLink activeclassname="active" to="/">
             Rockets
             {' '}
           </NavLink>
         </li>
         <li key={2}>
-          <NavLink activeClassName="active" to="/missions">
+          <NavLink activeclassname="active" to="/missions">
             {' '}
             Missions
             {' '}
           </NavLink>
         </li>
         <li key={3}>
-          <NavLink activeClassName="active" to="/profile">
+          <NavLink activeclassname="active" to="/profile">
             {' '}
             My Profile
           </NavLink>

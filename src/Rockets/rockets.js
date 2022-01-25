@@ -13,6 +13,7 @@ export const fetchRockets = () => async (dispatch) => {
       rocket_name: item.rocket_name,
       rocket_type: item.rocket_type,
       flickr_images: item.flickr_images[0],
+      description: item.description,
     };
     rockets.push(rocket);
   });

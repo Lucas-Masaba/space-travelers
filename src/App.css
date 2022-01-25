@@ -4,6 +4,7 @@ img {
 
 ul {
   list-style-type: none;
+  padding-left: 0%;
 }
 
 a {
@@ -13,4 +14,22 @@ a {
 
 .active {
   text-decoration: underline;
+}
+
+/*rockets*/
+.rocket_item {
+  display: flex;
+}
+
+.rocket_images {
+  width: 220px;
+}
+
+.rocket_image_container {
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.rocket_paragraph_container {
+  margin-top: -1.5%;
 }

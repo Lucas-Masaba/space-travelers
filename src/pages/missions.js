@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
 import MissionRow from '../components/mission-row';
-import './missions.module.css';
+import './missions.css';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);

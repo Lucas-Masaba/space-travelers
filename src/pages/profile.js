@@ -1,5 +1,5 @@
 // import React from 'react';
 
-const Profile = () => {};
+const Profile = () => <p>Under construction</p>;
 
 export default Profile;

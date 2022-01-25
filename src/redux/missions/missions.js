@@ -1,12 +1,6 @@
 export const FETCH = 'missions/FETCH';
-export const LOAD = 'missions/LOAD';
-export const ERROR = 'missions/ERROR';
 
-const initialState = {
-  missions: [],
-  loading: false,
-  error: '',
-};
+const initialState = [];
 
 const requestOptions = {
   method: 'GET',
@@ -14,36 +8,15 @@ const requestOptions = {
 };
 export const fetchMissions = () => (dispatch) => {
   dispatch({ type: LOAD });
-  return (
-    fetch('https://api.spacexdata.com/v3/missions', requestOptions)
-      .then((response) => response.json())
-      .then((data) => dispatch({ type: FETCH, data }))
-      .catch((error) => dispatch({ type: ERROR, error }))
-  );
+  return fetch('https://api.spacexdata.com/v3/missions', requestOptions)
+    .then((response) => response.json())
+    .then((data) => dispatch({ type: FETCH, data }))
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH: {
-      return {
-        ...state,
-        missions: [...action.data],
-        loading: false,
-      };
-    }
-    case LOAD: {
-      return {
-        ...state,
-        loading: true,
-        error: '',
-      };
-    }
-    case ERROR: {
-      return {
-        ...state,
-        loading: false,
-        error: action.error,
-      };
+      return [...action.data];
     }
     default:
       return state;

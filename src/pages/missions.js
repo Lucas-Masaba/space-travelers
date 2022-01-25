@@ -20,8 +20,7 @@ const Missions = () => {
           <th>Status</th>
           <th> </th>
         </tr>
-        {missions.loading && <h2>Loading...</h2>}
-        {missions.missions.map((mission) => (
+        {missions.map((mission) => (
           <MissionRow
             name={mission.mission_name}
             description={mission.description}

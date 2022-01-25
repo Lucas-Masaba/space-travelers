@@ -4,7 +4,7 @@ import logo from '../images/planet_2.png';
 
 const Header = () => (
   <header className="navContainer">
-    <img src={logo} alt="planet" />
+    <img className="header_img" src={logo} alt="planet" />
     <h1 className="Heading">Space Traveler&apos;s Hub</h1>
     <nav className="navBar">
       <ul className="navBarUl">

@@ -5,21 +5,24 @@ import { joinMissions } from '../redux/missions/missions';
 
 const MissionRow = (props) => {
   const {
-    name,
-    id,
-    description,
-    joined,
+    name, id, description, joined,
   } = props;
   const dispatch = useDispatch();
   const join = () => {
-    dispatch(joinMissions(id));
+    if (!joined) dispatch(joinMissions(id));
   };
   return (
     <tr>
       <th>{name}</th>
       <td>{description}</td>
       <td className="mission button-col">
-        <button type="button" name="member" className="mission member">
+        <button
+          type="button"
+          name="member"
+          className={
+            `mission member ${joined}`
+          }
+        >
           {joined ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
@@ -27,7 +30,9 @@ const MissionRow = (props) => {
         <button
           type="button"
           name="join"
-          className="mission join"
+          className={
+            `mission join ${joined}`
+          }
           onClick={join}
         >
           {joined ? 'Leave Mission' : 'Join Mission'}

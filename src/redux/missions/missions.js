@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => {
       });
       return {
         ...state,
-        newMission,
+        missions: newMission,
       };
     }
     default:

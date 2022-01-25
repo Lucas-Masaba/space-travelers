@@ -1,8 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { React, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRockets } from '../Rockets/rockets';
 
-const Rockets = (props) => {
-  const { rockets } = props;
+const Rockets = () => {
+  const rockets = useSelector((state) => state.rockets);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, []);
   return (
     // <div>
     //   <p>Development in progress</p>
@@ -24,13 +30,3 @@ const Rockets = (props) => {
   );
 };
 export default Rockets;
-
-Rockets.propTypes = {
-  rockets: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      rocket_name: PropTypes.string.isRequired,
-      rocket_description: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};

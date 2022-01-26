@@ -15,24 +15,16 @@ const MissionRow = (props) => {
     <tr>
       <th>{name}</th>
       <td>{description}</td>
-      <td className="mission button-col">
-        <button
-          type="button"
-          name="member"
-          className={
-            `mission member ${joined}`
-          }
-        >
+      <td className="button-col">
+        <button type="button" className={`member ${joined}`}>
           {joined ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
-      <td className="mission button-col">
+      <td className="button-col">
         <button
           type="button"
           name="join"
-          className={
-            `mission join ${joined}`
-          }
+          className={`join ${joined}`}
           onClick={join}
         >
           {joined ? 'Leave Mission' : 'Join Mission'}

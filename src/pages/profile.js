@@ -28,10 +28,12 @@ const Profile = () => {
                   </tr>
                 ))
               ) : (
-                <th className="not-found">
-                  See a list of all your joined missions&nbsp;
-                  <Link to="/missions">here.</Link>
-                </th>
+                <tr>
+                  <th className="not-found">
+                    To join missions, click&nbsp;
+                    <Link to="/missions">here.</Link>
+                  </th>
+                </tr>
               )}
             </tbody>
           </table>
@@ -55,10 +57,12 @@ const Profile = () => {
                   </tr>
                 ))
               ) : (
-                <th className="not-found">
-                  See a list of all your rockets&nbsp;
-                  <Link to="/">here.</Link>
-                </th>
+                <tr>
+                  <th className="not-found">
+                    To reserve rockets, click&nbsp;
+                    <Link to="/">here.</Link>
+                  </th>
+                </tr>
               )}
             </tbody>
           </table>

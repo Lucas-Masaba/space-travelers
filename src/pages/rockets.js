@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 const Rockets = (props) => {
   const { rockets, reserveRocketsProps } = props;
   return (
-    // <div>
-    //   <p>Development in progress</p>
-    // </div>
     <ul className="rockets_ul">
       {rockets.map((rocket) => (
         <li className="rocket_item" key={rocket.id}>
@@ -36,32 +33,6 @@ const Rockets = (props) => {
               {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
             </button>
           </div>
-          {/* {!rocket.reserved && (
-              <button
-                onClick={() => reserveRocketsProps(rocket.id)}
-                className="rocket_reserve"
-                type="button"
-              >
-                Reserve Rocket
-              </button>
-            )}
-            {rocket.reserved === true && (
-              <button
-                type="button"
-                onClick={() => reserveRocketsProps(rocket.id)}
-              >
-                Cancel Reservation
-              </button>
-            )}
-            {rocket.reserved === false && (
-              <button
-                onClick={() => reserveRocketsProps(rocket.id)}
-                className="rocket_reserve"
-                type="button"
-              >
-                Reserve Rocket
-              </button>
-            )} */}
         </li>
       ))}
     </ul>

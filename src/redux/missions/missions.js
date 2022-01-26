@@ -52,7 +52,6 @@ const reducer = (state = initialState, action) => {
     case TOGGLE_JOIN: {
       const newMission = state.missions.map((mission) => {
         if (mission.mission_id !== action.id) return mission;
-        // console.log(mission);
         return { ...mission, reserved: !mission.reserved };
       });
       return {

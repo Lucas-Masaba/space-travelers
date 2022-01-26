@@ -1,14 +1,21 @@
+html,
 body {
+  padding: 0;
+  margin: 0;
   font-size: 1.2rem;
 }
 
 /* Header */
 header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
+  border-bottom: 3px solid #dee2e6;
 }
 
 .header_img {
+  margin: 0 1rem;
   width: 50px;
   height: 50px;
 }
@@ -18,11 +25,21 @@ ul {
   padding-left: 0%;
 }
 
+header ul {
+  margin: 1rem 2rem;
+  display: flex;
+}
+
+li {
+  margin-left: 1rem;
+}
+
 a {
   text-decoration: none;
-  color: black;
+  color: #037cff;
 }
 
 .active {
   text-decoration: underline;
+  color: #206bbd;
 }

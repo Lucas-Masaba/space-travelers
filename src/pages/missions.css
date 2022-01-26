@@ -1,6 +1,6 @@
 
 table {
-  margin: auto;
+  margin: 2rem;
   width: calc(100vw - 4rem);
   border-collapse: collapse;
 }

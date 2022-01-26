@@ -24,7 +24,8 @@ const Rockets = (props) => {
               </span>
             )}
             <span>{rocket.description}</span>
-            <p>{`Type: ${rocket.rocket_type}`}</p>
+            <br />
+            <br />
             <button
               onClick={() => reserveRocketsProps(rocket.id)}
               className={`rocket_reserve ${rocket.reserved}`}

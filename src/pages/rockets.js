@@ -1,19 +1,9 @@
-import { React, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../redux/Rockets/rockets';
+import { React } from 'react';
 import './rockets.css';
+import PropTypes from 'prop-types';
 
-const Rockets = () => {
-  const rockets = useSelector((state) => state.rockets);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
-
-  const reserveRockets = (id) => {
-    dispatch(reserveRocket(id));
-  };
+const Rockets = (props) => {
+  const { rockets, reserveRocketsProps } = props;
   return (
     // <div>
     //   <p>Development in progress</p>
@@ -28,7 +18,7 @@ const Rockets = () => {
             <h3>{rocket.rocket_name}</h3>
             <p>{rocket.description}</p>
             <p>{`Type: ${rocket.rocket_type}`}</p>
-            <button onClick={() => reserveRockets(rocket.id)} className="rocket_reserve" type="button">Reserve Rocket</button>
+            <button onClick={() => reserveRocketsProps(rocket.id)} className="rocket_reserve" type="button">Reserve Rocket</button>
           </div>
         </li>
       ))}
@@ -36,3 +26,12 @@ const Rockets = () => {
   );
 };
 export default Rockets;
+
+Rockets.propTypes = {
+  rockets: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+  reserveRocketsProps: PropTypes.func.isRequired,
+};

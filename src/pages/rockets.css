@@ -4,7 +4,7 @@
 }
 
 .rocket_images {
-  width: 300px;
+  width: 400px;
 }
 
 .rocket_image_container {
@@ -22,7 +22,7 @@
   color: #fff;
   font-weight: bold;
   border: none;
-  padding: 1%;
+  padding: 1.5%;
 }
 
 .rocket_reserve.false {
@@ -50,4 +50,15 @@
   border-radius: 4px;
   padding: 0.5%;
   margin-right: 1%;
+}
+
+@media (max-width: 768px) and (max-width: 1100px) {
+  .rocket_item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rocket_images {
+    width: 100%;
+  }
 }

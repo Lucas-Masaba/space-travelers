@@ -1,0 +1,18 @@
+.profile > table {
+  margin: 2rem;
+  width: calc(50vw - 4rem);
+  padding: 2rem;
+}
+
+.profile th {
+  border: none;
+}
+
+.profile tr {
+  background: transparent;
+}
+
+.profile td {
+  padding: 0.6rem 0.6rem 1.6rem 0.6rem;
+  border: 2px solid #dee2e6;
+}

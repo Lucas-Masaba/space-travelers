@@ -1,27 +1,55 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { joinMissions } from '../redux/missions/missions';
 
 const MissionRow = (props) => {
-  const { name, description } = props;
+  const {
+    name, id, description, joined,
+  } = props;
+  const dispatch = useDispatch();
+  const join = () => {
+    if (!joined) dispatch(joinMissions(id));
+  };
   return (
     <tr>
-      <td className="mission title-col">{name}</td>
+      <th>{name}</th>
       <td>{description}</td>
       <td className="mission button-col">
-        <button type="button" className="mission member">
-          NOT A MEMBER
+        <button
+          type="button"
+          name="member"
+          className={
+            `mission member ${joined}`
+          }
+        >
+          {joined ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
       <td className="mission button-col">
-        <button type="button" className="mission join">
-          Join Mission
+        <button
+          type="button"
+          name="join"
+          className={
+            `mission join ${joined}`
+          }
+          onClick={join}
+        >
+          {joined ? 'Leave Mission' : 'Join Mission'}
         </button>
       </td>
     </tr>
   );
 };
+
+MissionRow.defaultProps = {
+  joined: false,
+};
 MissionRow.propTypes = {
   name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  joined: PropTypes.bool,
 };
+
 export default MissionRow;

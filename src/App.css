@@ -2,6 +2,7 @@ body {
   font-size: 1.2rem;
 }
 
+/* Header */
 header {
   display: flex;
   flex-direction: row;

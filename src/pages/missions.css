@@ -1,5 +1,7 @@
+
 table {
-  margin: 1rem;
+  margin: auto;
+  width: calc(100vw - 4rem);
   border-collapse: collapse;
 }
 
@@ -19,13 +21,12 @@ td {
   padding: 0.4rem;
 }
 
-th,
-.title-col {
+th {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-th {
+thead th {
   border-bottom-width: 3px;
 }
 
@@ -42,6 +43,7 @@ button {
   margin: auto;
   border-radius: 0.3rem;
   width: max-content;
+  cursor: pointer;
 }
 
 .member {
@@ -52,7 +54,7 @@ button {
   color: #f2f2f2;
 }
 
-.active-member {
+.member.true {
   background-color: #18a2b8;
 }
 
@@ -63,7 +65,7 @@ button {
   border: 1px solid #4b5156;
 }
 
-.joined {
-  background-color: #e04f5c;
+.join.true {
+  border-color: #e04f5c;
   color: #e04f5c;
 }

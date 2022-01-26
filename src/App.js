@@ -25,11 +25,14 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Routes>
-          <Route exact path="/" element={<Rockets rockets={rockets} reserveRocketsProps={reserveRockets} />} />
-          <Route path="/missions" element={<Missions />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route exact path="/" element={<Rockets rockets={rockets} reserveRocketsProps={reserveRockets} />} />
+            <Route path="/missions" element={<Missions />} />
+            <Route path="/profile" element={<Profile />} />
+
+          </Routes>
+        </main>
       </Router>
     </div>
   );

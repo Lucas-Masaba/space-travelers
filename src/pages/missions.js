@@ -42,13 +42,3 @@ const Missions = () => {
 };
 
 export default Missions;
-
-// // Missions.propTypes = {
-// //   missions: PropTypes.arrayOf(
-// //     PropTypes.instanceOf(Object),
-// //   ).isRequired,
-// //   loading: PropTypes.bool.isRequired,
-// //   error: PropTypes.string.isRequired,
-// // };
-
-// Missions.defaultProps = {};

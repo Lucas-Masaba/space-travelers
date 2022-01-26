@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { joinMissions } from '../redux/missions/missions';
+import { toggleJoin } from '../redux/missions/missions';
 
 const MissionRow = (props) => {
   const {
@@ -9,7 +9,7 @@ const MissionRow = (props) => {
   } = props;
   const dispatch = useDispatch();
   const join = () => {
-    if (!joined) dispatch(joinMissions(id));
+    dispatch(toggleJoin(id));
   };
   return (
     <tr>

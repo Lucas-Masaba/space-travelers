@@ -21,10 +21,13 @@ header {
 }
 
 ul {
-  margin: 1rem 2rem;
-  display: flex;
   list-style-type: none;
   padding-left: 0%;
+}
+
+header ul {
+  margin: 1rem 2rem;
+  display: flex;
 }
 
 li {

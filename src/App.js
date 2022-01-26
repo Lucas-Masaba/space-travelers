@@ -15,7 +15,7 @@ function App() {
     dispatch(fetchRockets());
     dispatch(fetchMissions());
   }, []);
-  
+
   const rockets = useSelector((state) => state.rockets);
   const reserveRockets = (id) => {
     dispatch(reserveRocket(id));

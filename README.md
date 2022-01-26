@@ -1,44 +1,41 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Space Travler's Hub
 
-> One paragraph statement about the project.
+> A hub for space travelers who want to reserve available rockets or join active missions.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./public/screenshot-rockets.png)
+![screenshot](./public/screenshot-missions.png)
+![screenshot](./public/screenshot-profile.png)
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React-Redux
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://space-traveler-zaman-lucas.netlify.app/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Node.js
 
 ### Setup
+- Clone this project and `cd` into the repository folder in the terminal.
 
 ### Install
+- Enter `npm install` and then `npm run build` in the terminal.
 
 ### Usage
-
-### Run tests
-
-### Deployment
-
+- Go to the 'Rockets' page to reserve rockets.
+- Go to the 'Missions' page to join missions.
+- Go to the profile page to see the chosen rockets and missions.
 
 
 ## Authors
@@ -47,13 +44,13 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@qwibbler](https://github.com/qwibbler)
 - Twitter: [@hmemaz](https://twitter.com/hmemaz)
-- LinkedIn: [Humaira Zaman](https://www.linkedin.com/in/hmemaz1994/)
+- LinkedIn: [Humaira Zaman](https://www.linkedin.com/in/humaira-zaman/)
 
-👤 **Author2**
+👤 **Khusiima Luke Masaba**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Lucas-Masaba](https://github.com/Lucas-Masaba)
+- Twitter: [@MasabaLuke](https://twitter.com/MasabaLuke)
+- LinkedIn: [Khusiima Luke Masaba](https://linkedin.com/in/khusiima-luke-masaba)
 
 ## 🤝 Contributing
 

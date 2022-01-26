@@ -26,3 +26,7 @@
 .not-found a {
   text-decoration: #037cff underline;
 }
+
+.profile_container {
+  display: flex;
+}

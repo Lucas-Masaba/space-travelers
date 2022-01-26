@@ -1,7 +1,7 @@
 export const FETCH = 'missions/FETCH';
 export const LOAD = 'missions/LOAD';
 export const ERROR = 'missions/ERROR';
-export const JOIN = 'missions/JOIN';
+export const TOGGLE_JOIN = 'missions/TOGGLE_JOIN';
 
 const initialState = {
   missions: [],
@@ -21,8 +21,8 @@ export const fetchMissions = () => (dispatch) => {
     .catch((error) => dispatch({ type: ERROR, error }));
 };
 
-export const joinMissions = (id) => ({
-  type: JOIN,
+export const toggleJoin = (id) => ({
+  type: TOGGLE_JOIN,
   id,
 });
 
@@ -49,11 +49,11 @@ const reducer = (state = initialState, action) => {
         error: action.error,
       };
     }
-    case JOIN: {
+    case TOGGLE_JOIN: {
       const newMission = state.missions.map((mission) => {
         if (mission.mission_id !== action.id) return mission;
         // console.log(mission);
-        return { ...mission, reserved: true };
+        return { ...mission, reserved: !mission.reserved };
       });
       return {
         ...state,

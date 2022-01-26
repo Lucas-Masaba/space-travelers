@@ -1,11 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import MissionRow from '../components/mission-row';
 import './missions.css';
 import '../components/spinner.css';
 
-const Missions = (props) => {
-  const { missions, loading, error } = props;
+const Missions = () => {
+  const missions = useSelector((state) => state.missions);
   return (
     <section className="missions">
       <table>
@@ -18,7 +18,7 @@ const Missions = (props) => {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
+          {missions.missions.map((mission) => (
             <MissionRow
               name={mission.mission_name}
               id={mission.mission_id}
@@ -29,26 +29,26 @@ const Missions = (props) => {
           ))}
         </tbody>
       </table>
-      {loading && (
+      {missions.loading && (
         <div className="spin-b4">
           <h2 style={{ textAlign: 'center' }}>
             <div className="spin" />
           </h2>
         </div>
       )}
-      {error && <h3>{error}</h3>}
+      {missions.error && <h3>{missions.error}</h3>}
     </section>
   );
 };
 
 export default Missions;
 
-Missions.propTypes = {
-  missions: PropTypes.arrayOf(
-    PropTypes.instanceOf(Object),
-  ).isRequired,
-  loading: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
-};
+// // Missions.propTypes = {
+// //   missions: PropTypes.arrayOf(
+// //     PropTypes.instanceOf(Object),
+// //   ).isRequired,
+// //   loading: PropTypes.bool.isRequired,
+// //   error: PropTypes.string.isRequired,
+// // };
 
-Missions.defaultProps = {};
+// Missions.defaultProps = {};

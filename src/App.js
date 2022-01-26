@@ -10,15 +10,13 @@ import { fetchMissions } from './redux/missions/missions';
 import './App.css';
 
 function App() {
-  const rockets = useSelector((state) => state.rockets);
-  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchRockets());
     dispatch(fetchMissions());
   }, []);
-
+  
+  const rockets = useSelector((state) => state.rockets);
   const reserveRockets = (id) => {
     dispatch(reserveRocket(id));
   };
@@ -29,7 +27,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Rockets rockets={rockets} reserveRocketsProps={reserveRockets} />} />
-          <Route path="/missions" element={<Missions missions={missions.missions} error={missions.error} loading={missions.loading} />} />
+          <Route path="/missions" element={<Missions />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>

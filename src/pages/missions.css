@@ -1,0 +1,81 @@
+
+table {
+  margin: 2rem;
+  width: calc(100vw - 4rem);
+  border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.missions.header {
+  background-color: white;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid #dee2e6;
+  padding: 0.4rem;
+}
+
+th {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+thead th {
+  border-bottom-width: 3px;
+}
+
+td {
+  padding-bottom: 1.6rem;
+}
+
+.button-col {
+  padding: 0.4rem;
+  vertical-align: middle;
+}
+
+button {
+  margin: auto;
+  border-radius: 0.3rem;
+  width: max-content;
+  cursor: pointer;
+}
+
+.member {
+  padding: 0.3rem;
+  font-weight: bold;
+  background-color: #6d757d;
+  border: none;
+  color: #f2f2f2;
+}
+
+.member.true {
+  background-color: #18a2b8;
+}
+
+.join {
+  padding: 0.4rem;
+  background-color: transparent;
+  color: #4b5156;
+  border: 1px solid #4b5156;
+}
+
+.join:hover {
+  background-color: #6d757d;
+  color: #f2f2f2;
+}
+
+.join.true {
+  border-color: #e04f5c;
+  color: #e04f5c;
+}
+
+.join.true:hover {
+  background-color: #e04f5c;
+  color: #f2f2f2;
+}

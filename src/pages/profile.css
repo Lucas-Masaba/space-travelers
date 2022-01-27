@@ -1,0 +1,31 @@
+.profile > table {
+  width: calc(50vw - 4rem);
+  padding: 2rem;
+}
+
+.profile th {
+  border: none;
+}
+
+.profile tr {
+  background: transparent;
+}
+
+.profile td {
+  padding: 0.6rem 0.6rem 1.6rem 0.6rem;
+  border: 2px solid #dee2e6;
+}
+
+.not-found {
+  font-size: 0.9rem;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.not-found a {
+  text-decoration: #037cff underline;
+}
+
+.profile_container {
+  display: flex;
+}
